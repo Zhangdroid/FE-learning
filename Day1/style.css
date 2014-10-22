@@ -1,0 +1,171 @@
+html{
+    font-family: "Microsoft YaHei",微软雅黑,"Microsoft JhengHei",华文细黑,STHeiti,MingLiu;
+}
+footer{
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    font-size: 12px;
+}
+/* General button style (reset) */
+.btn {
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background: none;
+    cursor: pointer;
+    padding: 10px 40px;
+    display: inline-block;
+    margin: 15px 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.btn:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+/* Button 1 */
+
+.btn-1 {
+    border: 3px solid #fff;
+    font-size: 25px;
+    color: #fff;
+}
+/* Button 1a */
+
+.btn-1a:hover,
+.btn-1a:active {
+    color: #777;
+    background: #fff;
+}
+/* Button 1b */
+
+.btn-1b:after {
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    background: #fff;
+}
+.btn-1b:hover,
+.btn-1b:active {
+    color: #777;
+}
+.btn-1b:hover:after,
+.btn-1b:active:after {
+    height: 100%;
+}
+/* Button 1c */
+
+.btn-1c:after {
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #fff;
+}
+.btn-1c:hover,
+.btn-1c:active {
+    color: #777;
+}
+.btn-1c:hover:after,
+.btn-1c:active:after {
+    width: 100%;
+}
+/* Button 1d */
+
+.btn-1d {
+    overflow: hidden;
+}
+.btn-1d:after {
+    width: 0;
+    height: 103%;
+    top: 50%;
+    left: 50%;
+    background: #fff;
+    opacity: 0;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+.btn-1d:hover,
+.btn-1d:active {
+    color: #777;
+}
+.btn-1d:hover:after {
+    width: 90%;
+    opacity: 1;
+}
+.btn-1d:active:after {
+    width: 101%;
+    opacity: 1;
+}
+/* Button 1e */
+
+.btn-1e {
+    overflow: hidden;
+}
+.btn-1e:after {
+    width: 100%;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    background: #fff;
+    opacity: 0;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+.btn-1e:hover,
+.btn-1e:active {
+    color: #777;
+}
+.btn-1e:hover:after {
+    height: 260%;
+    opacity: 1;
+}
+.btn-1e:active:after {
+    height: 400%;
+    opacity: 1;
+}
+/* Button 1f */
+
+.btn-1f {
+    overflow: hidden;
+}
+.btn-1f:after {
+    width: 101%;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    background: #fff;
+    opacity: 0;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+.btn-1f:hover,
+.btn-1f:active {
+    color: #777;
+}
+.btn-1f:hover:after {
+    height: 75%;
+    opacity: 1;
+}
+.btn-1f:active:after {
+    height: 130%;
+    opacity: 1;
+}

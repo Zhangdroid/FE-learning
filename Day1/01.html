@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Demo1</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <style>
+        html {
+            color: #fff;
+            background: #777;
+        }
+        #outer {
+            text-align: center;
+        }
+        #main {
+            margin: 10px auto;
+            height: 200px;
+            width: 200px;
+            background: #13ceaa;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="knowledge">
+        <ul>
+            <li>用原生Javascript改变对象CSS</li>
+            <li>简单Javascript动画</li>
+            <li>简单CSS3动画</li>
+            <li>定时器的简单运用</li>
+        </ul>
+    </div>
+    <div id="outer">
+        <div id="control">
+            <button id="cWidth" class="btn btn-1 btn-1a">变宽</button>
+            <button id="cHeight" class="btn btn-1 btn-1b">变高</button>
+            <button id="cColor" class="btn btn-1 btn-1c">变色</button>
+            <button id="hide" class="btn btn-1 btn-1d">隐藏</button>
+            <button id="reset" class="btn btn-1 btn-1e">重置</button>
+        </div>
+        <div id="main"></div>
+    </div>
+    <footer>这是我练习前端知识的地方~参考自<a href="http://js.fgm.cc/learn/" target="_blank">这里</a>
+    </footer>
+    <script>
+        window.onload = function () {
+            var oMain = document.getElementById("main");
+
+            var timer = null;
+            
+            var oBtnCWidth = document.getElementById("cWidth");
+            var oBtnCHeight = document.getElementById("cHeight");
+            var oBtnCColor = document.getElementById("cColor");
+            
+            var speed = 0;
+            oBtnCWidth.onclick = function () {
+                changeWidth(400);
+            }
+
+            function changeWidth(target) {
+                timer = setInterval(function () {
+                    speed = (target - oMain.offsetWidth) * 0.1;
+                    if (oMain.offsetWidth == target) {
+                        clearInterval(timer);
+                    } else {
+                        oMain.style.width = oMain.offsetWidth + speed + 'px';
+                    }
+                }, 30)
+            }
+        }
+    </script>
+</body>
+
+</html>
