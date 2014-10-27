@@ -3,16 +3,37 @@
     button来自：http://tympanus.net/codrops/2013/06/13/creative-button-styles/
 */
 
-html{
-    font-family: "Microsoft YaHei",微软雅黑,"Microsoft JhengHei",华文细黑,STHeiti,MingLiu;
+html {
+    font-family: "Microsoft YaHei", 微软雅黑, "Microsoft JhengHei", 华文细黑, STHeiti, MingLiu;
 }
-footer{
+a {
+    color: #31d6aa;
+    text-decoration: none;
+    transition: color 2s;
+    -moz-transition: color 2s;
+    -webkit-transition: color 2s;
+    -o-transition: color 2s;
+}
+a:hover {
+    color: #c4ff53;
+} 
+footer {
     position: absolute;
     bottom: 15px;
     right: 20px;
     font-size: 12px;
 }
+
+footer .fa{
+    padding: 10px;
+    font-size: 2em;
+}
+#social{
+    position: absolute;
+    right: 0;
+}
 /* General button style (reset) */
+
 .btn {
     border: none;
     font-family: inherit;

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Day1</title>
+    <link href="../style.css" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        html {
+            color: #fff;
+            background: #777;
+        }
+        #outer {
+            text-align: center;
+        }
+        #main {
+            margin: 10px auto;
+            height: 200px;
+            width: 200px;
+            background: #13ceaa;
+            transition: width 1s, height 1s, background 1s;
+            -moz-transition: width 1s, height 1s, background 1s;
+            -webkit-transition: width 1s, height 1s, background 1s;
+            -o-transition: width 1s, height 1s, background 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="knowledge">
+        <ul>
+            <li>用原生Javascript改变对象CSS</li>
+            <li>简单CSS3动画</li>
+        </ul>
+    </div>
+    <div id="references"></div>
+    <div id="outer">
+        <div id="control">
+            <button id="cWidth" class="btn btn-1 btn-1a">变宽</button>
+            <button id="cHeight" class="btn btn-1 btn-1b">变高</button>
+            <button id="cColor" class="btn btn-1 btn-1c">变色</button>
+            <button id="hide" class="btn btn-1 btn-1d">隐藏</button>
+            <button id="reset" class="btn btn-1 btn-1e">重置</button>
+        </div>
+        <div id="main"></div>
+    </div>
+    <footer>
+        <p>这是我练习前端知识的地方~参考自<a href="http://js.fgm.cc/learn/" target="_blank">这里</a>
+        </p>
+        <div id="social">
+            <a href="https://github.com/Zhangdroid"><i class="fa fa-github"></i></a>
+            <a href="https://twitter.com/z0803"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.facebook.com/zhangdroid"><i class="fa fa-facebook"></i></a>
+            <a href="http://weibo.com/zz0803"><i class="fa fa-weibo"></i></a>
+        </div>
+    </footer>
+    <script>
+        window.onload = function () {
+            var oMain = document.getElementById("main");
+
+
+            var oBtnCWidth = document.getElementById("cWidth");
+            var oBtnCHeight = document.getElementById("cHeight");
+            var oBtnCColor = document.getElementById("cColor");
+            var oBtnHide = document.getElementById("hide");
+            var oBtnReset = document.getElementById("reset");
+
+
+            oBtnCWidth.onclick = function () {
+                oMain.style.width = '400px';
+            }
+            oBtnCHeight.onclick = function () {
+                oMain.style.height = '400px';
+            }
+            oBtnCColor.onclick = function () {
+                oMain.style.background = 'red';
+            }
+            oBtnReset.onclick = function () {
+                reset();
+            }
+            oBtnHide.onclick = function () {
+                oMain.style.display = 'none';
+            }
+
+            function reset() {
+                oMain.style.display = 'block';
+                oMain.style.width = 200 + 'px';
+                oMain.style.height = 200 + 'px';
+                oMain.style.background = '#13ceaa';
+            }
+        }
+    </script>
+</body>
+
+</html>
